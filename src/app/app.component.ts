@@ -26,4 +26,8 @@ export class AppComponent {
   getValorTotal(): Number {
     return this.pessoas.reduce((soma, pessoa) => soma + pessoa.salario, 0);
   }
+
+  buscarId(id) {
+    return this.pessoas.find(pessoa => pessoa.id == id);
+  }
 }

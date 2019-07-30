@@ -13,3 +13,7 @@
   <li>{{ nomeFiltro }}</li>
 </ul>
 <p>Salario Total: {{ getValorTotal() }}</p>
+
+<input #parametroid placeholder="digite um id" />
+<button (click)="retorno = buscarId(parametroid.value)">Buscar Id</button>
+<p *ngIf="retorno != undefined">{{ retorno.id }} - {{ retorno.nome }}</p>
