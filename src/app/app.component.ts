@@ -40,4 +40,12 @@ export class AppComponent {
   verificarSalario(valor: number) {
     return this.pessoas.every(pessoa => pessoa.salario > valor);
   }
+
+  buscaCampos(criterio: string) {
+    return this.pessoas.filter(pessoa =>
+      Object.keys(pessoa).some(chave =>
+        pessoa[chave].toString.includes(criterio)
+      )
+    );
+  }
 }

@@ -27,3 +27,13 @@
       : "nem todo mundo grana mais de 500"
   }}
 </p>
+<br />
+<input
+  #criterio
+  placeholder="digite um criterio de busca"
+  (keyup)="resposta = buscaCampos(criterio.value)"
+/>
+
+<ul *ngFor="let r of resposta">
+  <li>{{ r.id }} - {{ r.nome }} - {{ r.salario }}</li>
+</ul>
