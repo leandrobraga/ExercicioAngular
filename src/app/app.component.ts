@@ -36,4 +36,8 @@ export class AppComponent {
       pessoa => (pessoa.salario += (pessoa.salario * percentual) / 100)
     );
   }
+
+  verificarSalario(valor: number) {
+    return this.pessoas.every(pessoa => pessoa.salario > valor);
+  }
 }

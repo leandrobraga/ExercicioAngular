@@ -20,3 +20,10 @@
 <br />
 <input #percentual placeholder="digite o percentual" />
 <button (click)="aumentarSalario(percentual.value)">Aumentar salario</button>
+<p>
+  {{
+    verificaSalario(500)
+      ? "Todo mundo gnaha mais que 500"
+      : "nem todo mundo grana mais de 500"
+  }}
+</p>
