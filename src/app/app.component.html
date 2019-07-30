@@ -8,3 +8,7 @@
 <p [hidden]="nomes.length > 0">Nenhum nome encontrado, usando hidden</p>
 
 <input #box placeholder="digite um nome" (keyup)="buscar(box.value)" />
+
+<ul *ngFor="let nomeFiltro of nomesFiltro">
+  <li>{{ nomeFiltro }}</li>
+</ul>

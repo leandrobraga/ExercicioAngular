@@ -7,8 +7,10 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   nomes: string[] = ["joao", "maria", "josé", "pedro", "felipe", "carlos"];
-
+  nomesFiltro: string[];
   buscar(valor: string) {
-    alert(valor);
+    this.nomesFiltro = this.nomes.filter(nome =>
+      nome.toLowerCase().includes(valor.toLowerCase())
+    );
   }
 }
