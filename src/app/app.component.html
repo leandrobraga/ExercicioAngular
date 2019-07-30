@@ -3,3 +3,6 @@
     O nome da pessoa é: {{ nome }}, está na posição {{ i + 1 }}
   </li>
 </ul>
+<p *ngIf="nomes.length == 0">Nenhum noem encontrado, usando *ngIf</p>
+
+<p [hidden]="nomes.length > 0">Nenhum nome encontrado, usando hidden</p>
