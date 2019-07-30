@@ -30,4 +30,10 @@ export class AppComponent {
   buscarId(id) {
     return this.pessoas.find(pessoa => pessoa.id == id);
   }
+
+  aumentarSalario(percentual) {
+    this.pessoas.map(
+      pessoa => (pessoa.salario += (pessoa.salario * percentual) / 100)
+    );
+  }
 }

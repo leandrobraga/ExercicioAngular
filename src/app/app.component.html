@@ -17,3 +17,6 @@
 <input #parametroid placeholder="digite um id" />
 <button (click)="retorno = buscarId(parametroid.value)">Buscar Id</button>
 <p *ngIf="retorno != undefined">{{ retorno.id }} - {{ retorno.nome }}</p>
+<br />
+<input #percentual placeholder="digite o percentual" />
+<button (click)="aumentarSalario(percentual.value)">Aumentar salario</button>
